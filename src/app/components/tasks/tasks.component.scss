@@ -1,0 +1,68 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  margin: 5% 20%;
+}
+.columna {
+  border-radius: 1em;
+  width: 500px;
+  margin: 30px;
+  padding: 30px;
+}
+.misTareas {
+  background-color: #ffad64;
+  height: 400px;
+  h3 {
+    margin-left: 15px;
+  }
+}
+.tareaSeleccionada {
+  background-color: #add4d3;
+  height: 300px;
+}
+.task {
+  display: flex;
+  flex-direction: row;
+  background-color: #f1d4af;
+  transition: background-color .3s;
+  border-radius: 1em;
+  padding: 20px;
+  margin: 10px;
+  h4 {
+    margin: 0;
+    font-size: 15px;
+  }
+  div {
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+  }
+}
+.icono {
+  margin: auto 0 auto auto;
+}
+.task:hover {
+  background-color: #e7c6a5;
+}
+.selected, .selected:hover{
+  background-color: #fb8351;
+}
+
+@media only screen and (max-width: 800px) {
+  .container{
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 5% 5%;
+  }
+  .columna {
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+  }
+  .misTareas {
+    height: 500px;
+  }
+  .tareaSeleccionada {
+    height: 180px;
+  }
+}

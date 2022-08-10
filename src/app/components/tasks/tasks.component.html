@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="columna misTareas">
+    <h3>Mis tareas</h3>
+    <ng-container *ngFor="let item of tasks">
+      <div (click)="selectedTask(item)" [ngClass]="item == selected ? ['task', 'selected'] : 'task'">
+        <div>
+          <h4>{{ item.titulo }}</h4>
+          <div>Creado el <b>{{ item.fecha_creacion}}</b> a las {{item.hora_creacion}}hs</div>
+        </div>
+        <div class="icono">
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+    </div>
+    </ng-container>
+  </div>
+  <div class="columna tareaSeleccionada">
+      <div>
+          <h3>{{selected.titulo}}</h3>
+          <div>Creado el {{ selected.fecha_creacion}} a las {{selected.hora_creacion}}hs</div>
+          <div>{{selected.descripcion}}</div>
+      </div>
+  </div>
+</div>
+
